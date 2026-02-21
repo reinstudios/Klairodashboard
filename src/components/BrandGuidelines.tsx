@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import logoImage from 'figma:asset/71db4ddb4dff2b50b549faea40c66d8a85b2e660.png';
+import appLogoImage from 'figma:asset/b714819a0e38cda4bc1635fd11f20a6e161f9173.png';
 import badExampleImage from 'figma:asset/8eaae7920b746a4101228246f5cb6d2f706a9b3a.png';
 
 // ─── Mock data ────────────────────────────────────────────────────
@@ -544,6 +545,29 @@ export function BrandGuidelines() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* ── App Logo: Light & Dark ── */}
+            <div className="mt-16">
+              <div className="flex items-center gap-2 text-[11px] font-bold tracking-widest text-[#888888] uppercase mb-4">
+                App Logo
+              </div>
+              <h3 className="font-serif text-2xl text-[#1C1C1C] mb-3">Light &amp; dark versions.</h3>
+              <p className="text-[#555555] max-w-2xl leading-relaxed mb-8">
+                Two approved logo treatments — light and dark. Use each version only on its corresponding surface. Never swap them or apply either to an unapproved background.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="rounded-2xl bg-[#F9F8F4] border border-[#E5E5E5] flex flex-col items-center justify-center gap-10 py-20 px-10">
+                  <ImageWithFallback src={appLogoImage} alt="Klairo" className="w-44 h-auto object-contain" />
+                  <span className="text-[11px] font-bold tracking-widest text-[#888888] uppercase">Light — On Cream</span>
+                </div>
+                <div className="rounded-2xl bg-[#1C1C1C] border border-[#1C1C1C] flex flex-col items-center justify-center gap-10 py-20 px-10">
+                  <div className="invert brightness-200">
+                    <ImageWithFallback src={appLogoImage} alt="Klairo" className="w-44 h-auto object-contain" />
+                  </div>
+                  <span className="text-[11px] font-bold tracking-widest text-white/40 uppercase">Dark — On Black</span>
+                </div>
+              </div>
             </div>
           </Section>
 
